@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Главная"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+
+			<section class="cart">
+				<div class="cart__container">
+					<a href="#" class="cart__back back _icon-back">На главную</a>
+					<h1 class="cart__title title">Корзина</h1>
+					<div class="cart__items">
+						<div class="cart__item item-cart">
+							<a href="#" class="item-cart__image"><img src="@img/cart/01.jpg" alt="" loading="lazy"></a>
+							<div class="item-cart__content">
+								<div class="item-cart__text">
+									<div class="item-cart__article">Артикул: 115361736</div>
+									<h3 class="item-cart__title title"><a href="#">Бренд</a></h3>
+									<a href="#" class="item-cart__category">Категория товара</a>
+									<div class="item-cart__line">Цвет: зеленый</div>
+									<div class="item-cart__line">Размер: 40-42</div>
+								</div>
+								<div class="item-cart__into">
+									<button class="item-cart__delete _icon-delete"></button>
+									<div class="item-cart__action">
+										<div data-quantity class="item-cart__quantity quantity">
+											<button data-quantity-minus type="button" class="quantity__button quantity__button--minus">-</button>
+											<div class="quantity__input"><input data-quantity-value autocomplete="off" type="text" name="form[]" value="1"></div>
+											<button data-quantity-plus type="button" class="quantity__button quantity__button--plus">+</button>
+										</div>
+										<div class="item-cart__price price">
+											<div class="price__curr">100 000 сум</div>
+											<div class="price__old">200 000 сум</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="cart__buttons">
+						<a href="#" class="cart__button button">Оформить Заказ</a>
+					</div>
+				</div>
+			</section>
+
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

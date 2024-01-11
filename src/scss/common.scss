@@ -214,6 +214,31 @@
 
 //========================================================================================================================================================
 
+.back {
+  display: flex;
+  align-items: center;
+  gap: toRem(10);
+
+  color: rgba(0, 0, 0, 0.4);
+  font-family: Gilroy;
+  @include adaptiveValue("font-size", 18, 16);
+  font-weight: 400;
+  line-height: 133.3%; /* 24/18 */
+
+  &::before {
+    @include adaptiveValue("font-size", 15, 13);
+  }
+
+  transition: all 0.3s ease 0s;
+  @media (any-hover: hover) {
+    &:hover {
+      color: #ec5027;
+    }
+  }
+}
+
+//========================================================================================================================================================
+
 // .fancybox__container {
 //     max-width: none;
 // }

@@ -8,34 +8,57 @@
 // </div>
 
 .quantity {
-  width: 88px;
-  height: 40px;
+  width: toRem(100);
+  height: toRem(50);
   display: flex;
-  border: 1px solid rgba(166, 166, 166, 0.45);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+
   // .quantity__button
   &__button {
     flex: 0 0 30px;
     position: relative;
     cursor: pointer;
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transition: all 0.3s ease 0s;
-      margin: 0px 0px 0px -4.5px;
-      background-color: #a6a6a6;
-      width: 9px;
-      height: 1px;
-    }
+
+    color: #130b0b;
+    font-family: Gilroy;
+    font-size: 29px;
+    @include adaptiveValue("font-size", 29, 22);
+    font-weight: 700;
+    line-height: 120.7%; /* 35/29 */
+
+    transition: all 0.3s ease 0s;
     @media (any-hover: hover) {
       &:hover {
-        &::before,
-        &::after {
-          background-color: rgba(0, 0, 0, 0.5);
-        }
+        color: #ec5027;
       }
+    }
+
+    // &::before,
+    // &::after {
+    //   content: "";
+    //   position: absolute;
+    //   top: 50%;
+    //   left: 50%;
+    //   transition: all 0.3s ease 0s;
+    //   margin: 0px 0px 0px -4.5px;
+    //   background-color: #a6a6a6;
+    //   width: 9px;
+    //   height: 1px;
+
+    //   color: #130b0b;
+    //   font-family: Gilroy;
+    //   font-size: 29px;
+    //   @include adaptiveValue("font-size", 29, 22);
+    //   font-weight: 700;
+    //   line-height: 120.7%; /* 35/29 */
+    // }
+    @media (any-hover: hover) {
+      // &:hover {
+      //   &::before,
+      //   &::after {
+      //     background-color: rgba(0, 0, 0, 0.5);
+      //   }
+      // }
     }
     // .quantity__button_plus
     &--plus {
@@ -52,10 +75,15 @@
     flex: 1 1 auto;
     input {
       height: 100%;
-      color: #a6a6a6;
-      font-size: 12px;
       width: 100%;
       text-align: center;
+
+      color: #130b0b;
+      font-family: Gilroy;
+      font-size: 29px;
+      @include adaptiveValue("font-size", 29, 22);
+      font-weight: 700;
+      line-height: 120.7%; /* 35/29 */
     }
   }
 }

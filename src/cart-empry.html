@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Главная"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+
+			<section class="cart">
+				<div class="cart__container">
+					<a href="#" class="cart__back back _icon-back">На главную</a>
+					<div class="cart__buttons">
+						<div class="cart__button button button_line">ВАША КОРЗИНА ПУСТА</div>
+						<a href="#" class="cart__button button">Оформить Заказ</a>
+					</div>
+				</div>
+			</section>
+
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_js.htm',{})
+</body>
+
+</html>
