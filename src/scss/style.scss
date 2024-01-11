@@ -171,6 +171,7 @@ body {
 
 // Підключення стилів окремих сторінок
 @import "home";
+@import "catalog";
 
 .page {
   padding-top: var(--header-height);

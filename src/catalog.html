@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Главная"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/_header.htm',{})
+        <main class="page">
+
+            <section class="catalog">
+                <div class="catalog__container">
+                    <div class="catalog__breadcrumbs breadcrumbs">
+                        <ul class="breadcrumbs__list">
+                            <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Главная </a></li>
+                            <li class="breadcrumbs__item"><span class="breadcrumbs__current">Женщинам</span></li>
+                        </ul>
+                    </div>
+                    <div class="catalog__title title">Женская одежда, обувь, аксессуары</div>
+
+                    <div class="catalog__body">
+
+                        <div class="catalog__filters filters">
+                            <div class="filters__open">
+                                <div class="filters__open-title _icon-filter" data-filter>Фильтр</div>
+                            </div>
+                            <div class="filters__wrapper">
+                                <div class="filters__wrapper-top">
+                                    <div class="filters__wrapper-title">Фильтр</div>
+                                    <button class="filters__wrapper-close _icon-close" data-filter-close></button>
+                                </div>
+                                <div class="filters__body">
+                                    <ul class="filters__list" data-spollers>
+                                        <li class="filters__item">
+                                            <!-- "_spoller-active" class. Для того чтобы он по умолчанию был открыт -->
+                                            <a href="#" class="filters__link" data-spoller>Одежда</a>
+                                            <ul class="filters__sublist">
+                                                <li class="filters__subitem"><a href="#" class="filters__sublink">Брюки</a></li>
+                                                <li class="filters__subitem"><a href="#" class="filters__sublink">Платья </a></li>
+                                                <li class="filters__subitem"><a href="#" class="filters__sublink">Джинсы</a></li>
+                                                <li class="filters__subitem"><a href="#" class="filters__sublink">Футболки</a></li>
+                                                <li class="filters__subitem"><a href="#" class="filters__sublink">Юбки</a></li>
+                                                <li class="filters__subitem"><a href="#" class="filters__sublink">Спорт</a></li>
+                                                <li class="filters__subitem"><a href="#" class="filters__sublink">Для дома</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="filters__item">
+                                            <a href="#" class="filters__link">Обувь</a>
+                                        </li>
+                                        <li class="filters__item">
+                                            <a href="#" class="filters__link">Аксессуары</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="catalog__content">
+
+                            <div class="catalog__category category" data-spollers="991.98,max" data-da=".filters__wrapper,991.98">
+                                <div class="category__item">
+                                    <div class="category__title _icon-angle" data-spoller>По популярности</div>
+                                    <div class="category__list">
+                                        <div class="category__checkbox checkbox">
+                                            <input id="a_1" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                            <label for="a_1" class="checkbox__label"><span class="checkbox__text">По популярности</span></label>
+                                        </div>
+                                        <div class="category__checkbox checkbox">
+                                            <input id="a_2" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                            <label for="a_2" class="checkbox__label"><span class="checkbox__text">По популярности</span></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="category__item">
+                                    <div class="category__title _icon-angle" data-spoller>Цвет</div>
+                                    <div class="category__list">
+                                        <div class="category__checkbox checkbox">
+                                            <input id="c_1" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                            <label for="c_1" class="checkbox__label">
+                                                <span class="checkbox__text">Зеленый</span>
+                                            </label>
+                                        </div>
+                                        <div class="category__checkbox checkbox">
+                                            <input id="c_2" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                            <label for="c_2" class="checkbox__label">
+                                                <span class="checkbox__text">Красный</span>
+                                            </label>
+                                        </div>
+                                        <div class="category__checkbox checkbox">
+                                            <input id="c_3" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                            <label for="c_3" class="checkbox__label">
+                                                <span class="checkbox__text">Белый</span>
+                                            </label>
+                                        </div>
+                                        <div class="category__checkbox checkbox">
+                                            <input id="c_4" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                            <label for="c_4" class="checkbox__label">
+                                                <span class="checkbox__text">Черный</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="category__item">
+                                    <div class="category__title _icon-angle" data-spoller>Размер</div>
+                                    <div class="category__list">
+                                        <div class="category__checkbox checkbox">
+                                            <input id="b_1" class="checkbox__input" type="radio" value="1" name="form[]">
+                                            <label for="b_1" class="checkbox__label"><span class="checkbox__text">40</span></label>
+                                        </div>
+                                        <div class="category__checkbox checkbox">
+                                            <input id="b_2" class="checkbox__input" type="radio" value="1" name="form[]">
+                                            <label for="b_2" class="checkbox__label"><span class="checkbox__text">42</span></label>
+                                        </div>
+                                        <div class="category__checkbox checkbox">
+                                            <input id="b_3" class="checkbox__input" type="radio" value="1" name="form[]">
+                                            <label for="b_3" class="checkbox__label"><span class="checkbox__text">44</span></label>
+                                        </div>
+                                        <div class="category__checkbox checkbox">
+                                            <input id="b_4" class="checkbox__input" type="radio" value="1" name="form[]">
+                                            <label for="b_4" class="checkbox__label"><span class="checkbox__text">46</span></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="category__item">
+                                    <div class="category__title _icon-angle" data-spoller>Бренд</div>
+                                    <div class="category__list">
+                                        <div class="category__checkbox checkbox">
+                                            <input id="g_1" class="checkbox__input" type="radio" value="1" name="form[]">
+                                            <label for="g_1" class="checkbox__label"><span class="checkbox__text">40</span></label>
+                                        </div>
+                                        <div class="category__checkbox checkbox">
+                                            <input id="g_2" class="checkbox__input" type="radio" value="1" name="form[]">
+                                            <label for="g_2" class="checkbox__label"><span class="checkbox__text">42</span></label>
+                                        </div>
+                                        <div class="category__checkbox checkbox">
+                                            <input id="g_3" class="checkbox__input" type="radio" value="1" name="form[]">
+                                            <label for="g_3" class="checkbox__label"><span class="checkbox__text">44</span></label>
+                                        </div>
+                                        <div class="category__checkbox checkbox">
+                                            <input id="g_4" class="checkbox__input" type="radio" value="1" name="form[]">
+                                            <label for="g_4" class="checkbox__label"><span class="checkbox__text">46</span></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="category__item">
+                                    <div class="category__title _icon-angle" data-spoller>Цена</div>
+                                    <div class="category__list">
+                                        <div class="filters__range range">
+                                            <input gata-value autocomplete="off" type="text" name="price" placeholder="0 - 100 000 000 сум" class="range__input">
+                                            <div class="range__line" gata-range data-from="0" data-to="100000000"></div>
+                                            <div class="range__bottom">
+                                                <span>0</span>
+                                                <span>100.000.000 сум</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="category__item">
+                                    <!-- "active" class -->
+                                    <button class="category__title ">Sale</button>
+                                </div>
+                            </div>
+
+                            <div class="catalog__items">
+                                <article class="catalog__slide item-product">
+                                    <div class="item-product__image-ibg">
+                                        <a href="#"><img src="@img/products/01.jpg" alt="" loading="lazy"></a>
+
+                                        <div class="item-product__labels">
+                                            <div class="item-product__label">-50%</div>
+                                            <div class="item-product__label sale">sale</div>
+                                        </div>
+                                    </div>
+                                    <div class="item-product__content">
+                                        <h4 class="item-product__title"><a href="#">Бренд</a></h4>
+                                        <a href="#" class="item-product__catelory">Категория товара</a>
+                                        <div class="item-product__price price">
+                                            <div class="price__curr">100 000 сум</div>
+                                            <div class="price__old">200 000 сум</div>
+                                        </div>
+                                    </div>
+                                    <div class="item-product__sizes">
+                                        <a href="#" class="item-product__size">42</a>
+                                        <a href="#" class="item-product__size">44</a>
+                                        <a href="#" class="item-product__size">46</a>
+                                        <a href="#" class="item-product__size">48</a>
+                                    </div>
+                                </article>
+                                <article class="catalog__slide item-product">
+                                    <div class="item-product__image-ibg">
+                                        <a href="#"><img src="@img/products/02.jpg" alt="" loading="lazy"></a>
+                                    </div>
+                                    <div class="item-product__content">
+                                        <h4 class="item-product__title"><a href="#">Бренд</a></h4>
+                                        <a href="#" class="item-product__catelory">Категория товара</a>
+                                        <div class="item-product__price price">
+                                            <div class="price__curr">100 000 сум</div>
+                                        </div>
+                                    </div>
+                                    <div class="item-product__sizes">
+                                        <a href="#" class="item-product__size">42</a>
+                                        <a href="#" class="item-product__size">44</a>
+                                        <a href="#" class="item-product__size">46</a>
+                                        <a href="#" class="item-product__size">48</a>
+                                    </div>
+                                </article>
+                                <article class="catalog__slide item-product">
+                                    <div class="item-product__image-ibg">
+                                        <a href="#"><img src="@img/products/03.jpg" alt="" loading="lazy"></a>
+
+                                        <div class="item-product__labels">
+                                            <div class="item-product__label">-50%</div>
+                                            <div class="item-product__label sale">sale</div>
+                                        </div>
+                                    </div>
+                                    <div class="item-product__content">
+                                        <h4 class="item-product__title"><a href="#">Бренд</a></h4>
+                                        <a href="#" class="item-product__catelory">Категория товара</a>
+                                        <div class="item-product__price price">
+                                            <div class="price__curr">100 000 сум</div>
+                                            <div class="price__old">200 000 сум</div>
+                                        </div>
+                                    </div>
+                                    <div class="item-product__sizes">
+                                        <a href="#" class="item-product__size">42</a>
+                                        <a href="#" class="item-product__size">44</a>
+                                        <a href="#" class="item-product__size">46</a>
+                                        <a href="#" class="item-product__size">48</a>
+                                    </div>
+                                </article>
+                                <article class="catalog__slide item-product">
+                                    <div class="item-product__image-ibg">
+                                        <a href="#"><img src="@img/products/04.jpg" alt="" loading="lazy"></a>
+
+                                        <div class="item-product__labels">
+                                            <div class="item-product__label">-50%</div>
+                                            <div class="item-product__label sale">sale</div>
+                                        </div>
+                                    </div>
+                                    <div class="item-product__content">
+                                        <h4 class="item-product__title"><a href="#">Бренд</a></h4>
+                                        <a href="#" class="item-product__catelory">Категория товара</a>
+                                        <div class="item-product__price price">
+                                            <div class="price__curr">100 000 сум</div>
+                                            <div class="price__old">200 000 сум</div>
+                                        </div>
+                                    </div>
+                                    <div class="item-product__sizes">
+                                        <a href="#" class="item-product__size">42</a>
+                                        <a href="#" class="item-product__size">44</a>
+                                        <a href="#" class="item-product__size">46</a>
+                                        <a href="#" class="item-product__size">48</a>
+                                    </div>
+                                </article>
+                                <article class="catalog__slide item-product">
+                                    <div class="item-product__image-ibg">
+                                        <a href="#"><img src="@img/products/05.jpg" alt="" loading="lazy"></a>
+
+                                        <div class="item-product__labels">
+                                            <div class="item-product__label">-50%</div>
+                                            <div class="item-product__label sale">sale</div>
+                                        </div>
+                                    </div>
+                                    <div class="item-product__content">
+                                        <h4 class="item-product__title"><a href="#">Бренд</a></h4>
+                                        <a href="#" class="item-product__catelory">Категория товара</a>
+                                        <div class="item-product__price price">
+                                            <div class="price__curr">100 000 сум</div>
+                                            <div class="price__old">200 000 сум</div>
+                                        </div>
+                                    </div>
+                                    <div class="item-product__sizes">
+                                        <a href="#" class="item-product__size">42</a>
+                                        <a href="#" class="item-product__size">44</a>
+                                        <a href="#" class="item-product__size">46</a>
+                                        <a href="#" class="item-product__size">48</a>
+                                    </div>
+                                </article>
+                                <article class="catalog__slide item-product">
+                                    <div class="item-product__image-ibg">
+                                        <a href="#"><img src="@img/products/01.jpg" alt="" loading="lazy"></a>
+
+                                        <div class="item-product__labels">
+                                            <div class="item-product__label">-50%</div>
+                                            <div class="item-product__label sale">sale</div>
+                                        </div>
+                                    </div>
+                                    <div class="item-product__content">
+                                        <h4 class="item-product__title"><a href="#">Бренд</a></h4>
+                                        <a href="#" class="item-product__catelory">Категория товара</a>
+                                        <div class="item-product__price price">
+                                            <div class="price__curr">100 000 сум</div>
+                                            <div class="price__old">200 000 сум</div>
+                                        </div>
+                                    </div>
+                                    <div class="item-product__sizes">
+                                        <a href="#" class="item-product__size">42</a>
+                                        <a href="#" class="item-product__size">44</a>
+                                        <a href="#" class="item-product__size">46</a>
+                                        <a href="#" class="item-product__size">48</a>
+                                    </div>
+                                </article>
+                                <article class="catalog__slide item-product">
+                                    <div class="item-product__image-ibg">
+                                        <a href="#"><img src="@img/products/02.jpg" alt="" loading="lazy"></a>
+                                    </div>
+                                    <div class="item-product__content">
+                                        <h4 class="item-product__title"><a href="#">Бренд</a></h4>
+                                        <a href="#" class="item-product__catelory">Категория товара</a>
+                                        <div class="item-product__price price">
+                                            <div class="price__curr">100 000 сум</div>
+                                        </div>
+                                    </div>
+                                    <div class="item-product__sizes">
+                                        <a href="#" class="item-product__size">42</a>
+                                        <a href="#" class="item-product__size">44</a>
+                                        <a href="#" class="item-product__size">46</a>
+                                        <a href="#" class="item-product__size">48</a>
+                                    </div>
+                                </article>
+                                <article class="catalog__slide item-product">
+                                    <div class="item-product__image-ibg">
+                                        <a href="#"><img src="@img/products/03.jpg" alt="" loading="lazy"></a>
+
+                                        <div class="item-product__labels">
+                                            <div class="item-product__label">-50%</div>
+                                            <div class="item-product__label sale">sale</div>
+                                        </div>
+                                    </div>
+                                    <div class="item-product__content">
+                                        <h4 class="item-product__title"><a href="#">Бренд</a></h4>
+                                        <a href="#" class="item-product__catelory">Категория товара</a>
+                                        <div class="item-product__price price">
+                                            <div class="price__curr">100 000 сум</div>
+                                            <div class="price__old">200 000 сум</div>
+                                        </div>
+                                    </div>
+                                    <div class="item-product__sizes">
+                                        <a href="#" class="item-product__size">42</a>
+                                        <a href="#" class="item-product__size">44</a>
+                                        <a href="#" class="item-product__size">46</a>
+                                        <a href="#" class="item-product__size">48</a>
+                                    </div>
+                                </article>
+                                <article class="catalog__slide item-product">
+                                    <div class="item-product__image-ibg">
+                                        <a href="#"><img src="@img/products/04.jpg" alt="" loading="lazy"></a>
+
+                                        <div class="item-product__labels">
+                                            <div class="item-product__label">-50%</div>
+                                            <div class="item-product__label sale">sale</div>
+                                        </div>
+                                    </div>
+                                    <div class="item-product__content">
+                                        <h4 class="item-product__title"><a href="#">Бренд</a></h4>
+                                        <a href="#" class="item-product__catelory">Категория товара</a>
+                                        <div class="item-product__price price">
+                                            <div class="price__curr">100 000 сум</div>
+                                            <div class="price__old">200 000 сум</div>
+                                        </div>
+                                    </div>
+                                    <div class="item-product__sizes">
+                                        <a href="#" class="item-product__size">42</a>
+                                        <a href="#" class="item-product__size">44</a>
+                                        <a href="#" class="item-product__size">46</a>
+                                        <a href="#" class="item-product__size">48</a>
+                                    </div>
+                                </article>
+                                <article class="catalog__slide item-product">
+                                    <div class="item-product__image-ibg">
+                                        <a href="#"><img src="@img/products/05.jpg" alt="" loading="lazy"></a>
+
+                                        <div class="item-product__labels">
+                                            <div class="item-product__label">-50%</div>
+                                            <div class="item-product__label sale">sale</div>
+                                        </div>
+                                    </div>
+                                    <div class="item-product__content">
+                                        <h4 class="item-product__title"><a href="#">Бренд</a></h4>
+                                        <a href="#" class="item-product__catelory">Категория товара</a>
+                                        <div class="item-product__price price">
+                                            <div class="price__curr">100 000 сум</div>
+                                            <div class="price__old">200 000 сум</div>
+                                        </div>
+                                    </div>
+                                    <div class="item-product__sizes">
+                                        <a href="#" class="item-product__size">42</a>
+                                        <a href="#" class="item-product__size">44</a>
+                                        <a href="#" class="item-product__size">46</a>
+                                        <a href="#" class="item-product__size">48</a>
+                                    </div>
+                                </article>
+                                <article class="catalog__slide item-product">
+                                    <div class="item-product__image-ibg">
+                                        <a href="#"><img src="@img/products/01.jpg" alt="" loading="lazy"></a>
+
+                                        <div class="item-product__labels">
+                                            <div class="item-product__label">-50%</div>
+                                            <div class="item-product__label sale">sale</div>
+                                        </div>
+                                    </div>
+                                    <div class="item-product__content">
+                                        <h4 class="item-product__title"><a href="#">Бренд</a></h4>
+                                        <a href="#" class="item-product__catelory">Категория товара</a>
+                                        <div class="item-product__price price">
+                                            <div class="price__curr">100 000 сум</div>
+                                            <div class="price__old">200 000 сум</div>
+                                        </div>
+                                    </div>
+                                    <div class="item-product__sizes">
+                                        <a href="#" class="item-product__size">42</a>
+                                        <a href="#" class="item-product__size">44</a>
+                                        <a href="#" class="item-product__size">46</a>
+                                        <a href="#" class="item-product__size">48</a>
+                                    </div>
+                                </article>
+                                <article class="catalog__slide item-product">
+                                    <div class="item-product__image-ibg">
+                                        <a href="#"><img src="@img/products/02.jpg" alt="" loading="lazy"></a>
+                                    </div>
+                                    <div class="item-product__content">
+                                        <h4 class="item-product__title"><a href="#">Бренд</a></h4>
+                                        <a href="#" class="item-product__catelory">Категория товара</a>
+                                        <div class="item-product__price price">
+                                            <div class="price__curr">100 000 сум</div>
+                                        </div>
+                                    </div>
+                                    <div class="item-product__sizes">
+                                        <a href="#" class="item-product__size">42</a>
+                                        <a href="#" class="item-product__size">44</a>
+                                        <a href="#" class="item-product__size">46</a>
+                                        <a href="#" class="item-product__size">48</a>
+                                    </div>
+                                </article>
+                                <article class="catalog__slide item-product">
+                                    <div class="item-product__image-ibg">
+                                        <a href="#"><img src="@img/products/03.jpg" alt="" loading="lazy"></a>
+
+                                        <div class="item-product__labels">
+                                            <div class="item-product__label">-50%</div>
+                                            <div class="item-product__label sale">sale</div>
+                                        </div>
+                                    </div>
+                                    <div class="item-product__content">
+                                        <h4 class="item-product__title"><a href="#">Бренд</a></h4>
+                                        <a href="#" class="item-product__catelory">Категория товара</a>
+                                        <div class="item-product__price price">
+                                            <div class="price__curr">100 000 сум</div>
+                                            <div class="price__old">200 000 сум</div>
+                                        </div>
+                                    </div>
+                                    <div class="item-product__sizes">
+                                        <a href="#" class="item-product__size">42</a>
+                                        <a href="#" class="item-product__size">44</a>
+                                        <a href="#" class="item-product__size">46</a>
+                                        <a href="#" class="item-product__size">48</a>
+                                    </div>
+                                </article>
+                                <article class="catalog__slide item-product">
+                                    <div class="item-product__image-ibg">
+                                        <a href="#"><img src="@img/products/04.jpg" alt="" loading="lazy"></a>
+
+                                        <div class="item-product__labels">
+                                            <div class="item-product__label">-50%</div>
+                                            <div class="item-product__label sale">sale</div>
+                                        </div>
+                                    </div>
+                                    <div class="item-product__content">
+                                        <h4 class="item-product__title"><a href="#">Бренд</a></h4>
+                                        <a href="#" class="item-product__catelory">Категория товара</a>
+                                        <div class="item-product__price price">
+                                            <div class="price__curr">100 000 сум</div>
+                                            <div class="price__old">200 000 сум</div>
+                                        </div>
+                                    </div>
+                                    <div class="item-product__sizes">
+                                        <a href="#" class="item-product__size">42</a>
+                                        <a href="#" class="item-product__size">44</a>
+                                        <a href="#" class="item-product__size">46</a>
+                                        <a href="#" class="item-product__size">48</a>
+                                    </div>
+                                </article>
+                                <article class="catalog__slide item-product">
+                                    <div class="item-product__image-ibg">
+                                        <a href="#"><img src="@img/products/05.jpg" alt="" loading="lazy"></a>
+
+                                        <div class="item-product__labels">
+                                            <div class="item-product__label">-50%</div>
+                                            <div class="item-product__label sale">sale</div>
+                                        </div>
+                                    </div>
+                                    <div class="item-product__content">
+                                        <h4 class="item-product__title"><a href="#">Бренд</a></h4>
+                                        <a href="#" class="item-product__catelory">Категория товара</a>
+                                        <div class="item-product__price price">
+                                            <div class="price__curr">100 000 сум</div>
+                                            <div class="price__old">200 000 сум</div>
+                                        </div>
+                                    </div>
+                                    <div class="item-product__sizes">
+                                        <a href="#" class="item-product__size">42</a>
+                                        <a href="#" class="item-product__size">44</a>
+                                        <a href="#" class="item-product__size">46</a>
+                                        <a href="#" class="item-product__size">48</a>
+                                    </div>
+                                </article>
+                                <article class="catalog__slide item-product">
+                                    <div class="item-product__image-ibg">
+                                        <a href="#"><img src="@img/products/05.jpg" alt="" loading="lazy"></a>
+
+                                        <div class="item-product__labels">
+                                            <div class="item-product__label">-50%</div>
+                                            <div class="item-product__label sale">sale</div>
+                                        </div>
+                                    </div>
+                                    <div class="item-product__content">
+                                        <h4 class="item-product__title"><a href="#">Бренд</a></h4>
+                                        <a href="#" class="item-product__catelory">Категория товара</a>
+                                        <div class="item-product__price price">
+                                            <div class="price__curr">100 000 сум</div>
+                                            <div class="price__old">200 000 сум</div>
+                                        </div>
+                                    </div>
+                                    <div class="item-product__sizes">
+                                        <a href="#" class="item-product__size">42</a>
+                                        <a href="#" class="item-product__size">44</a>
+                                        <a href="#" class="item-product__size">46</a>
+                                        <a href="#" class="item-product__size">48</a>
+                                    </div>
+                                </article>
+                            </div>
+                            <button class="catalog__button button-dark button-dark_line">Показать еще</button>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+</body>
+
+</html>

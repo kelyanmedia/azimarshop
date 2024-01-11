@@ -33,5 +33,17 @@ function pageLoad() {
       let input = document.querySelector("[data-search] input")
       input.focus()
     }
+
+    ///
+
+    if (targetElement.closest("[data-filter]")) {
+      bodyLock()
+      htmlTag.classList.add("open-filter")
+    }
+
+    if (targetElement.closest("[data-filter-close]")) {
+      htmlTag.classList.remove("open-filter")
+      bodyUnlock()
+    }
   })
 }

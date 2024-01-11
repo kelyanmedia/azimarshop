@@ -1,24 +1,24 @@
 //<FORM>
 // Сніппет (HTML):
 .form {
-	&__row {
-	}
-	&__column {
-	}
-	&__line {
-	}
-	&__input {
-	}
-	&__button {
-	}
-	&__error {
-	}
+  &__row {
+  }
+  &__column {
+  }
+  &__line {
+  }
+  &__input {
+  }
+  &__button {
+  }
+  &__error {
+  }
 }
 //</FORM>
 
 // <BUTTONS>
 // Сніппет (HTML): btn
-// @import "button";
+@import "button";
 
 // <INPUTS>
 // Сніппет (HTML): inp
@@ -26,7 +26,7 @@
 
 // <CHECK>
 // Сніппет (HTML): chk
-// @import "checkbox";
+@import "checkbox";
 
 // <RADIO>
 // Сніппет (HTML): opt
@@ -46,7 +46,7 @@
 
 // <RANGE>
 // Сніппет (HTML):
-// @import "range";
+@import "range";
 
 // <CALENDAR>
 // Сніппет (HTML):

@@ -2,13 +2,39 @@
 // Сніппет (HTML): btn
 
 .button {
-	display: inline-flex;
-	padding: 0px 0px;
-	@media (any-hover: hover) {
-		&:hover {
-		}
-	}
-	&--fw {
-		width: 100%;
-	}
+  display: inline-flex;
+  padding: 0px 0px;
+  @media (any-hover: hover) {
+    &:hover {
+    }
+  }
+  &--fw {
+    width: 100%;
+  }
+}
+
+//========================================================================================================================================================
+
+.button-dark {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid rgba(0, 0, 0, 0.4);
+
+  color: #130b0b;
+  font-family: Gilroy;
+  @include adaptiveValue("font-size", 29, 22);
+  font-weight: 400;
+
+  @include adaptiveValue("height", 75, 55);
+  padding: toRem(10) toRem(15);
+
+  transition: all 0.3s ease 0s;
+  @media (any-hover: hover) {
+    &:hover {
+      color: #fff;
+      background-color: #000000;
+    }
+  }
 }

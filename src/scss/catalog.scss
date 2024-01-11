@@ -1,0 +1,344 @@
+.catalog {
+  @include adaptiveValue("padding-top", 70, 35);
+  @include adaptiveValue("padding-bottom", 85, 40);
+  &__container {
+  }
+
+  &__body {
+    @media (min-width: $tablet) {
+      display: flex;
+      @include adaptiveValue("column-gap", 20, 15, 0, 1430, 991);
+    }
+  }
+
+  &__filters {
+    @media (min-width: $mobile) {
+      flex: 0 0 toRem(260);
+    }
+  }
+
+  &__content {
+    @media (min-width: $mobile) {
+      flex: 1 1 auto;
+    }
+  }
+
+  &__category {
+    @include adaptiveValue("margin-bottom", 40, 30);
+  }
+
+  &__breadcrumbs {
+    @include adaptiveValue("margin-bottom", 60, 25);
+  }
+
+  &__title {
+    @include adaptiveValue("margin-bottom", 70, 35);
+  }
+
+  &__items {
+    display: grid;
+    column-gap: toRem(10);
+    @include adaptiveValue("row-gap", 60, 40);
+    grid-template-columns: repeat(auto-fill, minmax(toRem(270), 1fr));
+
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 90, 60);
+    }
+  }
+
+  &__button {
+    width: 100%;
+  }
+
+  &__item {
+  }
+}
+.filters {
+  &__open {
+    @media (min-width: $tablet) {
+      display: none;
+    }
+    margin-bottom: toRem(20);
+  }
+
+  &__open-title {
+    padding: toRem(15) toRem(25);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: toRem(10);
+
+    font-size: toRem(22);
+    color: #ec5027;
+    border: toRem(1) solid #ec5027;
+
+    &::before {
+      font-size: toRem(18);
+    }
+  }
+
+  &__wrapper {
+    @media (max-width: $tablet) {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: -100%;
+      background-color: #fff;
+      overflow: auto;
+      z-index: 12;
+      padding: toRem(95) toRem(15) toRem(40);
+
+      display: grid;
+      grid-auto-rows: max-content;
+      gap: toRem(25);
+
+      transition: left 0.3s ease 0s;
+      .open-filter & {
+        left: 0;
+      }
+    }
+  }
+
+  &__wrapper-top {
+    @media (min-width: $tablet) {
+      display: none;
+    }
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: toRem(15);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: toRem(20) toRem(15);
+    background-color: #fff;
+    z-index: 9;
+
+    border-bottom: toRem(1) solid #d3d3d3;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    .open-filter & {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: all;
+      transition: all 0.3s ease 0.3s;
+    }
+  }
+
+  &__wrapper-title {
+    font-weight: 600;
+    font-size: toRem(24);
+  }
+
+  &__wrapper-close {
+    width: toRem(35);
+    height: toRem(35);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: toRem(22);
+    color: #000;
+
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  &__body {
+  }
+
+  &__list {
+    display: grid;
+    @include adaptiveValue("gap", 30, 10);
+
+    @media (max-width: $mobile) {
+      display: flex;
+      flex-direction: column;
+
+      column-gap: toRem(15);
+      row-gap: toRem(10);
+    }
+  }
+
+  &__item {
+    @include adaptiveValue("font-size", 36, 22);
+    font-weight: 400;
+    line-height: 119.4%; /* 43/36 */
+  }
+
+  &__link {
+    display: inline-block;
+    padding: toRem(5) 0;
+
+    transition: color 0.3s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        color: #ec5027;
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+
+    &._spoller-active {
+      color: #ec5027;
+      &::after {
+        opacity: 1;
+      }
+    }
+
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: toRem(1);
+      bottom: toRem(3);
+      left: 0;
+
+      background-color: #ec5027;
+      opacity: 0;
+      transition: opacity 0.3s ease 0s;
+    }
+  }
+
+  &__sublist {
+    padding: toRem(20) toRem(10) 0;
+  }
+
+  &__subitem {
+    &:not(:last-child) {
+      margin-bottom: toRem(10);
+    }
+  }
+  &__sublink {
+    font-weight: 300;
+  }
+}
+
+.category {
+  display: flex;
+  flex-wrap: wrap;
+  @include adaptiveValue("gap", 25, 15, 0, 1430, 991);
+
+  @media (max-width: $tablet) {
+    flex-direction: column;
+  }
+  &__item {
+    position: relative;
+
+    &:hover {
+      .category__list {
+        visibility: visible;
+        opacity: 1;
+        pointer-events: all;
+      }
+      .category__title::before {
+        transform: rotate(180deg);
+      }
+    }
+
+    &_sort {
+      @media (min-width: em(1100)) {
+        margin-left: auto;
+      }
+    }
+  }
+
+  &__title {
+    cursor: pointer;
+    border: 1px solid rgba(19, 11, 11, 0.4);
+
+    @include adaptiveValue("font-size", 29, 22);
+    font-weight: 400;
+    line-height: 120.7%; /* 35/29 */
+
+    padding: toRem(5) toRem(20);
+
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    column-gap: toRem(10);
+
+    @media (max-width: $tablet) {
+      justify-content: flex-end;
+      width: 100%;
+      text-align: start;
+
+      &::before {
+        margin-left: auto;
+      }
+    }
+
+    &._spoller-active::before {
+      transform: rotate(180deg);
+    }
+
+    &::before {
+      font-size: toRem(12);
+      transition: transform 0.3s ease 0s;
+    }
+
+    &.active {
+      background-color: #ec5027;
+      color: #fff;
+    }
+  }
+
+  &__list {
+    @media (min-width: $tablet) {
+      position: absolute;
+      top: calc(100% - toRem(1));
+      left: 0;
+      min-width: toRem(280);
+      max-height: toRem(135);
+      overflow-y: auto;
+
+      z-index: 3;
+
+      transition: all 0.3s ease 0s;
+
+      visibility: hidden;
+      opacity: 0;
+      pointer-events: none;
+
+      .category__item_sort & {
+        left: auto;
+        right: 0;
+      }
+    }
+    @extend %scrollbar;
+    padding: toRem(20);
+    background-color: #fff;
+    border: 1px solid rgba(19, 11, 11, 0.4);
+
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+
+  &__checkbox {
+    &:not(:last-child) {
+      margin-bottom: toRem(5);
+    }
+  }
+}
+.checkbox {
+  &__input {
+  }
+
+  &__label {
+  }
+
+  &__text {
+  }
+}
