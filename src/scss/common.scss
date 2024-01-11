@@ -3,9 +3,11 @@
 .pagination {
   pointer-events: all;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   column-gap: toRem(10);
+  row-gap: toRem(10);
   .swiper-pagination-bullet {
     flex-shrink: 0;
     cursor: pointer;
@@ -62,6 +64,16 @@
   justify-content: center;
   align-items: center;
   column-gap: toRem(30);
+}
+
+//========================================================================================================================================================
+
+.title {
+  color: #130b0b;
+  font-family: Gilroy;
+  @include adaptiveValue("font-size", 36, 24);
+  font-weight: 700;
+  line-height: 125%; /* 45/36 */
 }
 
 //========================================================================================================================================================

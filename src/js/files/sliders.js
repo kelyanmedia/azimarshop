@@ -162,6 +162,49 @@ function initSliders() {
       },
     })
   }
+  if (document.querySelector(".products__slider")) {
+    new Swiper(".products__slider", {
+      modules: [Navigation, Pagination],
+      observer: true,
+      observeParents: true,
+
+      speed: 600,
+      loop: true,
+      lazyPreloaderClass: "preloader",
+      pagination: {
+        el: ".products__slider .pagination",
+        clickable: true,
+      },
+
+      navigation: {
+        prevEl: ".products__slider .button-prev",
+        nextEl: ".products__slider .button-next",
+      },
+
+      breakpoints: {
+        320: {
+          slidesPerView: 1.3,
+          spaceBetween: 15,
+        },
+        600: {
+          slidesPerView: 2,
+          spaceBetween: 10,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 10,
+        },
+        991: {
+          slidesPerView: 3.5,
+          spaceBetween: 10,
+        },
+        1150: {
+          slidesPerView: 5,
+          spaceBetween: 10,
+        },
+      },
+    })
+  }
 }
 // Скролл на базі слайдера (за класом swiper scroll для оболонки слайдера)
 function initSlidersScroll() {
