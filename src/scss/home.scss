@@ -205,32 +205,11 @@
 
   &__labels {
     pointer-events: none;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: toRem(10);
 
     position: absolute;
     top: toRem(20);
     right: toRem(20);
     z-index: 2;
-  }
-
-  &__label {
-    padding: toRem(5) toRem(10);
-    background-color: #ec5027;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    color: #fff;
-    @include adaptiveValue("font-size", 18, 16);
-    font-weight: 500;
-
-    &.sale {
-      color: #ec5027;
-      background-color: #fff;
-    }
   }
 
   &__content {
@@ -323,6 +302,35 @@
       &:hover {
         color: #ec5027;
       }
+    }
+  }
+}
+
+.labels {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: toRem(10);
+  &__label {
+    padding: toRem(5) toRem(10);
+    background-color: #ec5027;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+
+    color: #fff;
+    @include adaptiveValue("font-size", 18, 16);
+    font-weight: 500;
+
+    @media (min-width: $mobile) {
+      min-height: toRem(32);
+    }
+
+    &.sale {
+      color: #ec5027;
+      background-color: #fff;
+      border: 1px solid #ec5027;
     }
   }
 }

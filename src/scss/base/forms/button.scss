@@ -3,13 +3,44 @@
 
 .button {
   display: inline-flex;
-  padding: 0px 0px;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid #ec5027;
+  background-color: #ec5027;
+
+  color: #fff;
+  font-family: Gilroy;
+  @include adaptiveValue("font-size", 29, 20);
+  font-weight: 400;
+
+  @include adaptiveValue("height", 75, 55);
+  padding: toRem(10) toRem(15);
+
+  text-transform: uppercase;
+  transition: all 0.3s ease 0s;
   @media (any-hover: hover) {
     &:hover {
+      color: #130b0b;
+      background-color: transparent;
     }
   }
+
   &--fw {
     width: 100%;
+  }
+
+  &_line {
+    border: 1px solid #ec5027;
+    background-color: transparent;
+    color: #ec5027;
+    @media (any-hover: hover) {
+      &:hover {
+        color: #fff;
+        border: 1px solid #ec5027;
+        background-color: #ec5027;
+      }
+    }
   }
 }
 
@@ -24,7 +55,7 @@
 
   color: #130b0b;
   font-family: Gilroy;
-  @include adaptiveValue("font-size", 29, 22);
+  @include adaptiveValue("font-size", 29, 20);
   font-weight: 400;
 
   @include adaptiveValue("height", 75, 55);

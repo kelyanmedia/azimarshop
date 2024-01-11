@@ -232,6 +232,50 @@ function initSliders() {
       },
     })
   }
+
+  for (const mobileSlider of document.querySelectorAll(".product__items")) {
+    if (mobileSlider) {
+      ;(function () {
+        "use strict"
+
+        const breakpoint = window.matchMedia("(min-width:991px)")
+        let slider
+
+        const enableSwiper = function () {
+          slider = new Swiper(mobileSlider, {
+            modules: [Pagination, Navigation],
+            observer: true,
+            observeParents: true,
+            slidesPerView: 1,
+            spaceBetween: 20,
+            speed: 800,
+            loop: true,
+
+            pagination: {
+              el: ".product .product__pagination",
+              clickable: true,
+            },
+            navigation: {
+              prevEl: ".product .button-prev",
+              nextEl: ".product .button-next",
+            },
+          })
+        }
+        const breakpointChecker = function () {
+          if (breakpoint.matches === true) {
+            if (slider !== undefined) slider.destroy(true, true)
+
+            return
+          } else if (breakpoint.matches === false) {
+            return enableSwiper()
+          }
+        }
+
+        breakpoint.addListener(breakpointChecker)
+        breakpointChecker()
+      })()
+    }
+  }
 }
 // Скролл на базі слайдера (за класом swiper scroll для оболонки слайдера)
 function initSlidersScroll() {

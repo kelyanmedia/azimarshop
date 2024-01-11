@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Главная"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/_header.htm',{})
+        <main class="page">
+
+            <section class="product">
+                <div class="product__container">
+                    <div class="product__breadcrumbs breadcrumbs">
+                        <ul class="breadcrumbs__list">
+                            <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Главная </a></li>
+                            <li class="breadcrumbs__item"><span class="breadcrumbs__current">Женщинам</span></li>
+                        </ul>
+                    </div>
+                    <div class="product__body">
+
+                        <div class="product__items">
+                            <div class="product__items-wrapper swiper-wrapper">
+                                <div class="product__image-ibg swiper-slide"><img src="@img/product/01.jpg" alt="" loading="lazy"></div>
+                                <div class="product__image-ibg swiper-slide"><img src="@img/product/02.jpg" alt="" loading="lazy"></div>
+                                <div class="product__image-ibg swiper-slide"><img src="@img/product/03.jpg" alt="" loading="lazy"></div>
+                                <div class="product__image-ibg swiper-slide"><img src="@img/product/04.jpg" alt="" loading="lazy"></div>
+                                <div class="product__image-ibg swiper-slide"><img src="@img/product/05.jpg" alt="" loading="lazy"></div>
+                            </div>
+                            <div class="product__navigation navigation slider-control">
+                                <button class="navigation__button button-prev _icon-prev"></button>
+                                <div class="product__pagination pagination"></div>
+                                <button class="navigation__button button-next _icon-next"></button>
+                            </div>
+                        </div>
+
+                        <div class="product__content content-product">
+                            <div class="content-product__top">
+                                <h1 class="content-product__maintitle title">Бренд</h1>
+                                <div class="content-product__labels labels">
+                                    <div class="labels__label">-50%</div>
+                                    <div class="labels__label sale">sale</div>
+                                </div>
+                            </div>
+                            <a href="#" class="content-product__category">Категория товара</a>
+
+                            <div class="content-product__price price">
+                                <div class="price__curr">100 000 сум</div>
+                                <div class="price__old">200 000 сум</div>
+                            </div>
+
+                            <div class="content-product__color">
+                                <div class="content-product__checkbox checkbox-color">
+                                    <input id="c_1" checked data-error="Ошибка" class="checkbox-color__input" type="radio" value="1" name="color">
+                                    <label for="c_1" class="checkbox-color__label" style="background-color: #D9D9D9;"></label>
+                                </div>
+                                <div class="content-product__checkbox checkbox-color">
+                                    <input id="c_2" data-error="Ошибка" class="checkbox-color__input" type="radio" value="1" name="color">
+                                    <label for="c_2" class="checkbox-color__label" style="background-color: #489862;"></label>
+                                </div>
+                                <div class="content-product__checkbox checkbox-color">
+                                    <input id="c_3" data-error="Ошибка" class="checkbox-color__input" type="radio" value="1" name="color">
+                                    <label for="c_3" class="checkbox-color__label" style="background-color: #312b87;"></label>
+                                </div>
+                                <div class="content-product__checkbox checkbox-color">
+                                    <input id="c_4" data-error="Ошибка" class="checkbox-color__input" type="radio" value="1" name="color">
+                                    <label for="c_4" class="checkbox-color__label" style="background-color: #fa186e;"></label>
+                                </div>
+                            </div>
+                            <div class="content-product__subtitle">Цвет: зеленый</div>
+
+                            <div class="content-product__size">
+                                <div class="content-product__checkbox checkbox-num">
+                                    <input id="p_1" checked data-error="Ошибка" class="checkbox-num__input" type="radio" value="1" name="size">
+                                    <label for="p_1" class="checkbox-num__label"><span class="checkbox-num__text">40-42</span></label>
+                                </div>
+                                <div class="content-product__checkbox checkbox-num">
+                                    <input id="p_2" data-error="Ошибка" class="checkbox-num__input" type="radio" value="1" name="size">
+                                    <label for="p_2" class="checkbox-num__label"><span class="checkbox-num__text">42-44</span></label>
+                                </div>
+                                <div class="content-product__checkbox checkbox-num">
+                                    <input id="p_3" data-error="Ошибка" class="checkbox-num__input" type="radio" value="1" name="size">
+                                    <label for="p_3" class="checkbox-num__label"><span class="checkbox-num__text">44-46</span></label>
+                                </div>
+                                <div class="content-product__checkbox checkbox-num">
+                                    <input id="p_4" data-error="Ошибка" class="checkbox-num__input" type="radio" value="1" name="size">
+                                    <label for="p_4" class="checkbox-num__label"><span class="checkbox-num__text">46-48</span></label>
+                                </div>
+                            </div>
+                            <a href="#" class="content-product__link">Таблица размеров</a>
+
+                            <div class="content-product__buttons">
+                                <button class="content-product__button button">В корзину</button>
+                                <!-- <a href="#" class="content-product__button button button_line">Перейти в корзину</a> -->
+                                <button class="content-product__button content-product__favorite _icon-favorite"></button>
+                            </div>
+
+                            <div class="content-product__title title">Описание товара</div>
+
+                            <div class="content-product__text">
+                                <p>Спортивные брюки из органического хлопка от Marc O'Polo - модель прямого кроя с широкой удобной резинкой, выполненная в однотонном зеленом дизайне. Особенности кроя: шнуровка-завязка, боковые карманы, стрелки по всей длине, сзади накладной карман, уровень талии завышенный. Брюки пошиты из плотной, мягкой ткани.</p>
+                            </div>
+
+                            <div class="content-product__title title">Характеристики товара:</div>
+
+                            <div data-showmore="items" class="content-product__showmore-line showmore-line">
+                                <ul data-showmore-content="7" class="showmore-line__content">
+                                    <li class="showmore-line__line line">
+                                        <span>Состав</span>
+                                        <span>Хлопок 100%</span>
+                                    </li>
+                                    <li class="showmore-line__line line">
+                                        <span>Артикул</span>
+                                        <span>141532647299</span>
+                                    </li>
+                                    <li class="showmore-line__line line">
+                                        <span>Длина</span>
+                                        <span>83 см</span>
+                                    </li>
+                                    <li class="showmore-line__line line">
+                                        <span>Длина рукава</span>
+                                        <span>62 см</span>
+                                    </li>
+                                    <li class="showmore-line__line line">
+                                        <span>Сезон</span>
+                                        <span>мульти</span>
+                                    </li>
+                                    <li class="showmore-line__line line">
+                                        <span>Страна производства</span>
+                                        <span>Китай</span>
+                                    </li>
+                                    <li class="showmore-line__line line">
+                                        <span>Бренд</span>
+                                        <span>Бренд</span>
+                                    </li>
+                                    <li class="showmore-line__line line">
+                                        <span>Сезон</span>
+                                        <span>мульти</span>
+                                    </li>
+                                    <li class="showmore-line__line line">
+                                        <span>Страна производства</span>
+                                        <span>Китай</span>
+                                    </li>
+                                    <li class="showmore-line__line line">
+                                        <span>Бренд</span>
+                                        <span>Бренд</span>
+                                    </li>
+                                </ul>
+                                <button hidden data-showmore-button type="button" class="showmore-line__more"><span>Подробнее</span><span>Скрыть</span></button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <section class="products">
+                <div class="products__container">
+                    <div class="products__top">
+                        <h2 class="products__title title">Новинки</h2>
+                    </div>
+
+                    <div class="products__slider">
+                        <div class="products__wrapper swiper-wrapper">
+                            <article class="products__slide item-product swiper-slide">
+                                <div class="item-product__image-ibg">
+                                    <a href="#">
+                                        <img src="@img/products/01.jpg" alt="" loading="lazy">
+                                        <div class="preloader"></div>
+                                    </a>
+
+                                    <div class="item-product__labels labels">
+                                        <div class="labels__label">-50%</div>
+                                        <div class="labels__label sale">sale</div>
+                                    </div>
+                                </div>
+                                <div class="item-product__content">
+                                    <h4 class="item-product__title"><a href="#">Бренд</a></h4>
+                                    <a href="#" class="item-product__catelory">Категория товара</a>
+                                    <div class="item-product__price price">
+                                        <div class="price__curr">100 000 сум</div>
+                                        <div class="price__old">200 000 сум</div>
+                                    </div>
+                                </div>
+                                <div class="item-product__sizes">
+                                    <a href="#" class="item-product__size">42</a>
+                                    <a href="#" class="item-product__size">44</a>
+                                    <a href="#" class="item-product__size">46</a>
+                                    <a href="#" class="item-product__size">48</a>
+                                </div>
+                            </article>
+                            <article class="products__slide item-product swiper-slide">
+                                <div class="item-product__image-ibg">
+                                    <a href="#">
+                                        <img src="@img/products/02.jpg" alt="" loading="lazy">
+                                        <div class="preloader"></div>
+                                    </a>
+                                </div>
+                                <div class="item-product__content">
+                                    <h4 class="item-product__title"><a href="#">Бренд</a></h4>
+                                    <a href="#" class="item-product__catelory">Категория товара</a>
+                                    <div class="item-product__price price">
+                                        <div class="price__curr">100 000 сум</div>
+                                    </div>
+                                </div>
+                                <div class="item-product__sizes">
+                                    <a href="#" class="item-product__size">42</a>
+                                    <a href="#" class="item-product__size">44</a>
+                                    <a href="#" class="item-product__size">46</a>
+                                    <a href="#" class="item-product__size">48</a>
+                                </div>
+                            </article>
+                            <article class="products__slide item-product swiper-slide">
+                                <div class="item-product__image-ibg">
+                                    <a href="#">
+                                        <img src="@img/products/03.jpg" alt="" loading="lazy">
+                                        <div class="preloader"></div>
+                                    </a>
+
+                                    <div class="item-product__labels labels">
+                                        <div class="labels__label">-50%</div>
+                                        <div class="labels__label sale">sale</div>
+                                    </div>
+                                </div>
+                                <div class="item-product__content">
+                                    <h4 class="item-product__title"><a href="#">Бренд</a></h4>
+                                    <a href="#" class="item-product__catelory">Категория товара</a>
+                                    <div class="item-product__price price">
+                                        <div class="price__curr">100 000 сум</div>
+                                        <div class="price__old">200 000 сум</div>
+                                    </div>
+                                </div>
+                                <div class="item-product__sizes">
+                                    <a href="#" class="item-product__size">42</a>
+                                    <a href="#" class="item-product__size">44</a>
+                                    <a href="#" class="item-product__size">46</a>
+                                    <a href="#" class="item-product__size">48</a>
+                                </div>
+                            </article>
+                            <article class="products__slide item-product swiper-slide">
+                                <div class="item-product__image-ibg">
+                                    <a href="#">
+                                        <img src="@img/products/04.jpg" alt="" loading="lazy">
+                                        <div class="preloader"></div>
+                                    </a>
+
+                                    <div class="item-product__labels labels">
+                                        <div class="labels__label">-50%</div>
+                                        <div class="labels__label sale">sale</div>
+                                    </div>
+                                </div>
+                                <div class="item-product__content">
+                                    <h4 class="item-product__title"><a href="#">Бренд</a></h4>
+                                    <a href="#" class="item-product__catelory">Категория товара</a>
+                                    <div class="item-product__price price">
+                                        <div class="price__curr">100 000 сум</div>
+                                        <div class="price__old">200 000 сум</div>
+                                    </div>
+                                </div>
+                                <div class="item-product__sizes">
+                                    <a href="#" class="item-product__size">42</a>
+                                    <a href="#" class="item-product__size">44</a>
+                                    <a href="#" class="item-product__size">46</a>
+                                    <a href="#" class="item-product__size">48</a>
+                                </div>
+                            </article>
+                            <article class="products__slide item-product swiper-slide">
+                                <div class="item-product__image-ibg">
+                                    <a href="#">
+                                        <img src="@img/products/05.jpg" alt="" loading="lazy">
+                                        <div class="preloader"></div>
+                                    </a>
+
+                                    <div class="item-product__labels labels">
+                                        <div class="labels__label">-50%</div>
+                                        <div class="labels__label sale">sale</div>
+                                    </div>
+                                </div>
+                                <div class="item-product__content">
+                                    <h4 class="item-product__title"><a href="#">Бренд</a></h4>
+                                    <a href="#" class="item-product__catelory">Категория товара</a>
+                                    <div class="item-product__price price">
+                                        <div class="price__curr">100 000 сум</div>
+                                        <div class="price__old">200 000 сум</div>
+                                    </div>
+                                </div>
+                                <div class="item-product__sizes">
+                                    <a href="#" class="item-product__size">42</a>
+                                    <a href="#" class="item-product__size">44</a>
+                                    <a href="#" class="item-product__size">46</a>
+                                    <a href="#" class="item-product__size">48</a>
+                                </div>
+                            </article>
+                            <article class="products__slide item-product swiper-slide">
+                                <div class="item-product__image-ibg">
+                                    <a href="#">
+                                        <img src="@img/products/04.jpg" alt="" loading="lazy">
+                                        <div class="preloader"></div>
+                                    </a>
+
+                                    <div class="item-product__labels labels">
+                                        <div class="labels__label">-50%</div>
+                                        <div class="labels__label sale">sale</div>
+                                    </div>
+                                </div>
+                                <div class="item-product__content">
+                                    <h4 class="item-product__title"><a href="#">Бренд</a></h4>
+                                    <a href="#" class="item-product__catelory">Категория товара</a>
+                                    <div class="item-product__price price">
+                                        <div class="price__curr">100 000 сум</div>
+                                        <div class="price__old">200 000 сум</div>
+                                    </div>
+                                </div>
+                                <div class="item-product__sizes">
+                                    <a href="#" class="item-product__size">42</a>
+                                    <a href="#" class="item-product__size">44</a>
+                                    <a href="#" class="item-product__size">46</a>
+                                    <a href="#" class="item-product__size">48</a>
+                                </div>
+                            </article>
+                            <article class="products__slide item-product swiper-slide">
+                                <div class="item-product__image-ibg">
+                                    <a href="#">
+                                        <img src="@img/products/05.jpg" alt="" loading="lazy">
+                                        <div class="preloader"></div>
+                                    </a>
+
+                                    <div class="item-product__labels labels">
+                                        <div class="labels__label">-50%</div>
+                                        <div class="labels__label sale">sale</div>
+                                    </div>
+                                </div>
+                                <div class="item-product__content">
+                                    <h4 class="item-product__title"><a href="#">Бренд</a></h4>
+                                    <a href="#" class="item-product__catelory">Категория товара</a>
+                                    <div class="item-product__price price">
+                                        <div class="price__curr">100 000 сум</div>
+                                        <div class="price__old">200 000 сум</div>
+                                    </div>
+                                </div>
+                                <div class="item-product__sizes">
+                                    <a href="#" class="item-product__size">42</a>
+                                    <a href="#" class="item-product__size">44</a>
+                                    <a href="#" class="item-product__size">46</a>
+                                    <a href="#" class="item-product__size">48</a>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="products__navigation navigation slider-control">
+                            <button class="navigation__button button-prev _icon-prev"></button>
+                            <div class="products__pagination pagination"></div>
+                            <button class="navigation__button button-next _icon-next"></button>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </main>
+        @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+</body>
+
+</html>
