@@ -8,6 +8,17 @@
   justify-content: center;
   column-gap: toRem(10);
   row-gap: toRem(10);
+
+  &.pagination_black {
+    .swiper-pagination-bullet {
+      background-color: #130b0b;
+      border-color: #130b0b;
+    }
+    .swiper-pagination-bullet-active {
+      background-color: transparent;
+    }
+  }
+
   .swiper-pagination-bullet {
     flex-shrink: 0;
     cursor: pointer;
@@ -56,6 +67,10 @@
       &:hover {
       }
     }
+
+    .navigation_black & {
+      color: #130b0b;
+    }
   }
 }
 
@@ -74,6 +89,10 @@
   @include adaptiveValue("font-size", 36, 24);
   font-weight: 700;
   line-height: 125%; /* 45/36 */
+
+  &_white {
+    color: #fff;
+  }
 }
 
 //========================================================================================================================================================

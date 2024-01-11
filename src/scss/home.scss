@@ -414,3 +414,156 @@
     }
   }
 }
+
+//========================================================================================================================================================
+
+.offers {
+  @include adaptiveValue("padding-top", 95, 35);
+  @include adaptiveValue("padding-bottom", 95, 35);
+  &__container {
+  }
+
+  &__title {
+    font-weight: 500;
+    color: #3c3f52;
+
+    @include adaptiveValue("margin-bottom", 60, 35);
+  }
+
+  &__slide {
+  }
+
+  &__slider {
+  }
+
+  &__wrapper {
+    &:not(:last-child) {
+      margin-bottom: toRem(30);
+    }
+  }
+
+  &__navigation {
+  }
+
+  &__pagination {
+  }
+}
+
+.slide-offers {
+  background-color: #ec5027;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include adaptiveValue("gap", 20, 10);
+
+  flex: 1 1 100%;
+
+  @media (max-width: $mobile) {
+    flex-direction: column;
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      .slide-offers__text {
+        color: #130b0b;
+      }
+    }
+  }
+
+  &__text {
+    transition: all 0.3s ease 0s;
+
+    @media (max-width: $mobile) {
+      padding: toRem(20) toRem(15);
+    }
+
+    @media (min-width: $mobile) {
+      max-width: toRem(374);
+      @include adaptiveValue("padding-left", 50, 15, 0, 1430, 991);
+    }
+  }
+
+  &__image-ibg {
+    // flex: 0 0 percent(509, 1350);
+    // padding-bottom: percent(190, 1350);
+
+    @media (max-width: $mobile) {
+      width: 100%;
+      padding-bottom: percent(120, 345);
+    }
+
+    @media (min-width: $mobile) {
+      flex: 0 0 toRem(300);
+      height: toRem(140);
+    }
+
+    @media (min-width: $tablet) {
+      flex: 0 0 toRem(509);
+      height: toRem(190);
+    }
+
+    border: 1px solid #130b0b;
+  }
+}
+
+//========================================================================================================================================================
+
+.advantages {
+  @include adaptiveValue("padding-top", 95, 35);
+  @include adaptiveValue("padding-bottom", 95, 35);
+  &__container {
+  }
+  &__title {
+    font-weight: 400;
+    text-align: center;
+
+    @include adaptiveValue("margin-bottom", 60, 35);
+  }
+
+  &__items {
+    display: grid;
+    column-gap: toRem(20);
+    row-gap: toRem(20);
+    grid-template-columns: repeat(auto-fill, minmax(toRem(335), 1fr));
+
+    @media (max-width: $mobile) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+  }
+}
+
+.item-advantages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include adaptiveValue("gap", 30, 15);
+
+  @media (max-width: $mobile) {
+    flex-direction: row;
+  }
+
+  &__ico {
+    @include adaptiveValue("width", 100, 60);
+    @include adaptiveValue("height", 100, 60);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__text {
+    text-align: center;
+    color: #130b0b;
+    font-family: Gilroy;
+    @include adaptiveValue("font-size", 29, 20);
+    font-weight: 700;
+    line-height: 124.1%; /* 36/29 */
+  }
+}
