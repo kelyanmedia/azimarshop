@@ -1,5 +1,69 @@
 // Заголовки, загальні БЕМ блоки та інше...
 
+.pagination {
+  pointer-events: all;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: toRem(10);
+  .swiper-pagination-bullet {
+    flex-shrink: 0;
+    cursor: pointer;
+    width: toRem(10);
+    height: toRem(10);
+
+    border-radius: 50%;
+    background-color: #ec5027;
+    border: 1px solid #ec5027;
+    transition: all 0.3s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: transparent;
+      }
+    }
+
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      inset: toRem(-5);
+    }
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: transparent;
+  }
+}
+
+.navigation {
+  pointer-events: none;
+  &__button {
+    pointer-events: all;
+    @include adaptiveValue("width", 25, 20);
+    @include adaptiveValue("height", 25, 16);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: toRem(15);
+    color: #ec5027;
+
+    transition: all 0.3s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+      }
+    }
+  }
+}
+
+.slider-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: toRem(30);
+}
+
 //========================================================================================================================================================
 
 // .fancybox__container {
