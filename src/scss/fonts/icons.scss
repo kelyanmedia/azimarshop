@@ -1,0 +1,67 @@
+%ic {
+  font-family: "icons";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+[class*="_icon-"] {
+  &:before {
+    @extend %ic;
+    display: block;
+  }
+}
+._icon-angle:before {
+  content: "\e900";
+}
+._icon-back:before {
+  content: "\e901";
+}
+._icon-cart:before {
+  content: "\e902";
+}
+._icon-close:before {
+  content: "\e903";
+}
+._icon-delete:before {
+  content: "\e904";
+}
+._icon-done:before {
+  content: "\e905";
+}
+._icon-facebook:before {
+  content: "\e906";
+}
+._icon-favorite:before {
+  content: "\e907";
+}
+._icon-favorite-active:before {
+  content: "\e908";
+}
+._icon-filter:before {
+  content: "\e909";
+}
+._icon-instagram:before {
+  content: "\e90a";
+}
+._icon-next:before {
+  content: "\e90b";
+}
+._icon-prev:before {
+  content: "\e90c";
+}
+._icon-profile:before {
+  content: "\e90d";
+}
+._icon-sad:before {
+  content: "\e90e";
+}
+._icon-search:before {
+  content: "\e90f";
+}
+._icon-telegram:before {
+  content: "\e910";
+}

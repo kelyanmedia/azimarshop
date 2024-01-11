@@ -1,0 +1,417 @@
+//====================================================================================================
+
+.header {
+  position: fixed;
+  z-index: 12;
+  width: 100%;
+  top: 0;
+  left: 0;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+
+  @media (max-width: $mobile) {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+      background-color: #fff;
+
+      pointer-events: none;
+      opacity: 0;
+      z-index: 7;
+      .menu-open & {
+        opacity: 1;
+        transition: all 0.3s ease 0.3s;
+      }
+    }
+  }
+  &__top {
+  }
+
+  &__container {
+  }
+
+  &__body {
+    display: flex;
+    align-items: center;
+
+    @include adaptiveValue("padding-top", 25, 15, 0, 1150, 767);
+    @include adaptiveValue("padding-bottom", 25, 15, 0, 1150, 767);
+    @media (max-width: $pc) {
+      @include adaptiveValue("column-gap", 20, 15, 0, 1150, 991);
+    }
+
+    @media (min-width: $pc) {
+      column-gap: toRem(95);
+    }
+
+    @media (max-width: $mobile) {
+      justify-content: space-between;
+    }
+  }
+
+  &__logo {
+    position: relative;
+    z-index: 7;
+    @include adaptiveValue("font-size", 30, 24, 0, 1150, 767);
+    font-weight: 700;
+    line-height: 123.3%; /* 37/30 */
+
+    transition: all 0.3s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        opacity: 0.9;
+        color: #ec5027;
+      }
+    }
+  }
+
+  &__menu {
+    @media (min-width: $mobile) {
+      flex: 1 1 auto;
+    }
+  }
+
+  &__search {
+  }
+
+  &__actions {
+    position: relative;
+    z-index: 7;
+  }
+
+  &__icon {
+  }
+}
+
+.top-header {
+  background-color: #130b0b;
+
+  &__container {
+  }
+
+  &__body {
+    gap: toRem(20);
+
+    @media (min-width: em(1150)) {
+      display: grid;
+      align-items: center;
+
+      grid-template-columns: 1fr auto 1fr;
+
+      &::before {
+        content: "";
+      }
+    }
+    @media (max-width: em(1150)) {
+      display: flex;
+      justify-content: space-between;
+    }
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      row-gap: toRem(5);
+    }
+
+    @media (min-width: $mobile) {
+      min-height: toRem(50);
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    @include adaptiveValue("column-gap", 50, 15, 0, 1150, 991);
+    row-gap: toRem(5);
+
+    @media (min-width: $mobile) {
+      &:last-child {
+        justify-content: flex-end;
+      }
+    }
+
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__item {
+  }
+
+  &__link {
+    display: inline-block;
+    padding: toRem(5) 0;
+
+    font-weight: 400;
+    line-height: 120%; /* 24/20 */
+
+    @media (min-width: $mobile) {
+      @include adaptiveValue("font-size", 20, 18, 0, 1150, 767);
+      color: #fff;
+    }
+    @media (max-width: $mobile) {
+      font-size: toRem(24);
+    }
+
+    transition: all 0.3s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        color: #ec5027;
+      }
+    }
+  }
+}
+.menu {
+  &__icon {
+  }
+
+  &__body {
+    @media (max-width: $mobile) {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: -100%;
+      background-color: #fff;
+      overflow: auto;
+
+      display: grid;
+      grid-auto-rows: max-content;
+      gap: toRem(15);
+
+      padding: calc(var(--header-height) + toRem(20)) toRem(15) toRem(40);
+
+      z-index: 6;
+      transition: left 0.3s ease 0s;
+
+      .menu-open & {
+        left: 0;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    row-gap: toRem(5);
+
+    @include adaptiveValue("column-gap", 25, 10, 0, 1150, 991);
+
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__item {
+  }
+
+  &__link {
+    display: inline-block;
+    padding: toRem(5) 0;
+
+    font-weight: 400;
+    line-height: 120%; /* 24/20 */
+
+    @media (min-width: $mobile) {
+      @include adaptiveValue("font-size", 20, 18, 0, 1150, 767);
+    }
+
+    @media (max-width: $mobile) {
+      font-size: toRem(24);
+    }
+
+    transition: all 0.3s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        color: #ec5027;
+      }
+    }
+  }
+}
+
+.actions-header {
+  display: flex;
+  align-items: center;
+  @include adaptiveValue("gap", 15, 10, 0, 1150, 991);
+  &__link {
+    position: relative;
+    @include adaptiveValue("width", 30, 26, 0, 1150, 767);
+    @include adaptiveValue("height", 30, 26, 0, 1150, 767);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include adaptiveValue("font-size", 25, 22, 0, 1150, 767);
+
+    transition: all 0.3s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        color: #ec5027;
+      }
+    }
+
+    span {
+      position: absolute;
+      @include adaptiveValue("width", 20, 16, 0, 767, 375);
+      @include adaptiveValue("height", 20, 16, 0, 767, 375);
+      background-color: #ec5027;
+      border-radius: 50%;
+      top: -3px;
+      right: -2px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      color: #fff;
+      @include adaptiveValue("font-size", 10, 8, 0, 767, 375);
+      font-weight: 400;
+    }
+
+    &[data-search-open] {
+      @media (min-width: em(1150)) {
+        display: none;
+      }
+    }
+  }
+}
+
+//====================================================================================================
+
+.search {
+  @media (min-width: em(1150)) {
+    flex: 0 0 percent(350, 1400);
+  }
+  @media (max-width: em(1150)) {
+    order: 100;
+  }
+  @media (max-width: em(1150)) {
+    position: fixed;
+    width: 100%;
+    height: toRem(80);
+    top: toRem(-80);
+    left: 0;
+    background-color: #fff;
+    padding: toRem(15);
+    transition: top 0.3s ease 0s;
+    z-index: 12;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+    .open-search & {
+      top: 0;
+    }
+  }
+  &__body {
+  }
+
+  &__form {
+    display: flex;
+    overflow: hidden;
+
+    height: toRem(50);
+    background: #fff;
+
+    border: 1px solid rgba(0, 0, 0, 0.4);
+  }
+
+  &__input {
+    width: 100%;
+    color: #130b0b;
+    font-family: Gilroy;
+    font-size: 20px;
+    font-weight: 400;
+    height: 100%;
+    padding: 0 toRem(13);
+
+    &::placeholder {
+      color: rgba(0, 0, 0, 0.4);
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__button {
+    flex-shrink: 0;
+    font-size: toRem(25);
+
+    height: 100%;
+    width: toRem(50);
+
+    border-left: 1px solid rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease 0s;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: #ec5027;
+      }
+    }
+
+    &._icon-search {
+      //   border-radius: toRem(5) 0 0 toRem(5);
+    }
+    &._icon-close {
+      @media (min-width: em(1150)) {
+        display: none;
+      }
+    }
+  }
+}
+
+//Burger
+
+.icon-menu {
+  display: none;
+  @media (max-width: $mobile) {
+    display: block;
+    position: relative;
+    width: toRem(30);
+    height: toRem(18);
+    z-index: 7;
+    @media (any-hover: none) {
+      cursor: default;
+    }
+    span,
+    &::before,
+    &::after {
+      content: "";
+      transition: all 0.3s ease 0s;
+      right: 0;
+      position: absolute;
+      width: 100%;
+      height: toRem(2);
+      background-color: #000;
+    }
+    &::before {
+      top: 0;
+    }
+    &::after {
+      bottom: 0;
+    }
+    span {
+      top: calc(50% - toRem(1));
+    }
+    .menu-open & {
+      span {
+        width: 0;
+      }
+      &::before,
+      &::after {
+      }
+      &::before {
+        top: calc(50% - toRem(1));
+        transform: rotate(-45deg);
+      }
+      &::after {
+        bottom: calc(50% - toRem(1));
+        transform: rotate(45deg);
+      }
+    }
+  }
+}
