@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Главная"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/_header.htm',{})
+        <main class="page">
+
+            <section class="profile">
+                <div class="profile__container">
+                    <a href="#" class="profile__back back _icon-back">На главную</a>
+
+                    <h1 class="profile__title title">Личный кабинет</h1>
+
+                    <div class="profile__body">
+                        <div class="profile__links">
+                            <a href="#" class="profile__link active">Мои заказы</a>
+                            <a href="#" class="profile__link">Личные данные</a>
+                            <a href="#" class="profile__link">Избранное</a>
+                            <a href="#" class="profile__link logout">Выйти</a>
+                        </div>
+
+                        <div class="profile__wrapper">
+
+                            <div class="profile__orders">
+                                <a href="#" class="profile__order-profile order-profile-item">
+                                    <div class="order-profile-item__col">
+                                        <div class="order-profile-item__top">
+                                            <div class="order-profile-item__title fill">Выполнен</div>
+                                            <div class="order-profile-item__title">657465847594</div>
+                                        </div>
+                                        <div class="order-profile-item__date title">25.12.2023</div>
+                                    </div>
+                                    <div class="order-profile-item__col">
+                                        <div class="order-profile-item__top">
+                                            <div class="order-profile-item__title">состав заказа: 2 позиции</div>
+                                        </div>
+                                        <div class="order-profile-item__images">
+                                            <div class="order-profile-item__image"><img src="@img/profile/small01.jpg" alt="" loading="lazy"></div>
+                                            <div class="order-profile-item__image"><img src="@img/profile/small02.jpg" alt="" loading="lazy"></div>
+                                        </div>
+                                    </div>
+                                    <div class="order-profile-item__col">
+                                        <div class="order-profile-item__top">
+                                            <div class="order-profile-item__title">сумма заказа</div>
+                                        </div>
+                                        <div class="order-profile-item__price title">100 000 сум </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="profile__order-profile order-profile-item">
+                                    <div class="order-profile-item__col">
+                                        <div class="order-profile-item__top">
+                                            <div class="order-profile-item__title fill">Выполнен</div>
+                                            <div class="order-profile-item__title">657465847594</div>
+                                        </div>
+                                        <div class="order-profile-item__date title">25.12.2023</div>
+                                    </div>
+                                    <div class="order-profile-item__col">
+                                        <div class="order-profile-item__top">
+                                            <div class="order-profile-item__title">состав заказа: 2 позиции</div>
+                                        </div>
+                                        <div class="order-profile-item__images">
+                                            <div class="order-profile-item__image"><img src="@img/profile/small01.jpg" alt="" loading="lazy"></div>
+                                            <div class="order-profile-item__image"><img src="@img/profile/small02.jpg" alt="" loading="lazy"></div>
+                                        </div>
+                                    </div>
+                                    <div class="order-profile-item__col">
+                                        <div class="order-profile-item__top">
+                                            <div class="order-profile-item__title">сумма заказа</div>
+                                        </div>
+                                        <div class="order-profile-item__price title">100 000 сум </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </section>
+
+        </main>
+        @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+</body>
+
+</html>

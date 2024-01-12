@@ -155,6 +155,10 @@
 
 .item-product {
   position: relative;
+
+  display: flex;
+  flex-direction: column;
+
   padding-top: 1px;
 
   &::before {
@@ -212,11 +216,40 @@
     z-index: 2;
   }
 
+  &__favorite {
+    position: absolute;
+    bottom: toRem(20);
+    right: toRem(20);
+    width: toRem(30);
+    height: toRem(30);
+    @include adaptiveValue("font-size", 25, 20);
+
+    color: #ec5027;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (any-hover: hover) {
+      &:hover {
+        &::before {
+          content: "\e908";
+        }
+      }
+    }
+  }
+
   &__content {
     padding: toRem(10);
+
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
   }
 
   &__title {
+    flex: 1 1 auto;
+
     @include adaptiveValue("font-size", 29, 22);
     font-weight: 700;
     line-height: 124.1%; /* 36/29 */

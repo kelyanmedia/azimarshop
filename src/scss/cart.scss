@@ -14,6 +14,7 @@
 
   &__items {
     border-top: 1px solid rgba(0, 0, 0, 0.4);
+    padding-top: toRem(30);
   }
 
   &__item {
@@ -34,7 +35,10 @@
   position: relative;
   border-bottom: 1px solid rgba(0, 0, 0, 0.4);
   padding-bottom: toRem(30);
-  padding-top: toRem(30);
+
+  &:not(:first-child) {
+    padding-top: toRem(30);
+  }
 
   display: flex;
   @include adaptiveValue("column-gap", 70, 20, 0, 1430, 991);
@@ -157,7 +161,7 @@
 
     @media (max-width: $tablet) {
       position: absolute;
-      top: toRem(30);
+      top: toRem(0);
       right: 0;
       z-index: 2;
     }

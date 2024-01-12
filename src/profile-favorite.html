@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Главная"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/_header.htm',{})
+        <main class="page">
+
+            <section class="profile">
+                <div class="profile__container">
+                    <a href="#" class="profile__back back _icon-back">На главную</a>
+
+                    <h1 class="profile__title title">Личный кабинет</h1>
+
+                    <div class="profile__body">
+                        <div class="profile__links">
+                            <a href="#" class="profile__link active">Мои заказы</a>
+                            <a href="#" class="profile__link">Личные данные</a>
+                            <a href="#" class="profile__link">Избранное</a>
+                            <a href="#" class="profile__link logout">Выйти</a>
+                        </div>
+
+                        <div class="profile__wrapper">
+
+                            <div class="profile__favorite">
+                                <div class="profile__favorite-items">
+                                    <article class="profile__favorite-item item-product">
+                                        <div class="item-product__image-ibg">
+                                            <a href="#"><img src="@img/products/01.jpg" alt="" loading="lazy"></a>
+
+                                            <button class="item-product__favorite _icon-favorite-active"></button>
+
+                                            <div class="item-product__labels labels">
+                                                <div class="labels__label">-50%</div>
+                                                <div class="labels__label sale">sale</div>
+                                            </div>
+                                        </div>
+                                        <div class="item-product__content">
+                                            <h4 class="item-product__title"><a href="#">Бренд</a></h4>
+                                            <a href="#" class="item-product__catelory">Категория товара</a>
+                                            <div class="item-product__price price">
+                                                <div class="price__curr">100 000 сум</div>
+                                                <div class="price__old">200 000 сум</div>
+                                            </div>
+                                        </div>
+                                        <div class="item-product__sizes">
+                                            <a href="#" class="item-product__size">42</a>
+                                            <a href="#" class="item-product__size">44</a>
+                                            <a href="#" class="item-product__size">46</a>
+                                            <a href="#" class="item-product__size">48</a>
+                                        </div>
+                                    </article>
+                                    <article class="profile__favorite-item item-product">
+                                        <div class="item-product__image-ibg">
+                                            <a href="#"><img src="@img/products/02.jpg" alt="" loading="lazy"></a>
+
+                                            <button class="item-product__favorite _icon-favorite"></button>
+                                        </div>
+                                        <div class="item-product__content">
+                                            <h4 class="item-product__title"><a href="#">Бренд</a></h4>
+                                            <a href="#" class="item-product__catelory">Категория товара</a>
+                                            <div class="item-product__price price">
+                                                <div class="price__curr">100 000 сум</div>
+                                            </div>
+                                        </div>
+                                        <div class="item-product__sizes">
+                                            <a href="#" class="item-product__size">42</a>
+                                            <a href="#" class="item-product__size">44</a>
+                                            <a href="#" class="item-product__size">46</a>
+                                            <a href="#" class="item-product__size">48</a>
+                                        </div>
+                                    </article>
+                                    <article class="profile__favorite-item item-product">
+                                        <div class="item-product__image-ibg">
+                                            <a href="#"><img src="@img/products/03.jpg" alt="" loading="lazy"></a>
+
+                                            <button class="item-product__favorite _icon-favorite"></button>
+
+                                            <div class="item-product__labels labels">
+                                                <div class="labels__label">-50%</div>
+                                                <div class="labels__label sale">sale</div>
+                                            </div>
+                                        </div>
+                                        <div class="item-product__content">
+                                            <h4 class="item-product__title"><a href="#">Бренд</a></h4>
+                                            <a href="#" class="item-product__catelory">Категория товара</a>
+                                            <div class="item-product__price price">
+                                                <div class="price__curr">100 000 сум</div>
+                                                <div class="price__old">200 000 сум</div>
+                                            </div>
+                                        </div>
+                                        <div class="item-product__sizes">
+                                            <a href="#" class="item-product__size">42</a>
+                                            <a href="#" class="item-product__size">44</a>
+                                            <a href="#" class="item-product__size">46</a>
+                                            <a href="#" class="item-product__size">48</a>
+                                        </div>
+                                    </article>
+                                </div>
+                                <a href="#" class="profile__favorite-button button">Перейти в каталог</a>
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </section>
+
+        </main>
+        @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+</body>
+
+</html>
