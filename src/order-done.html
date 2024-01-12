@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Главная"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/_header.htm',{})
+        <main class="page">
+
+            <section class="order">
+                <div class="order__container">
+                    <a href="#" class="order__back back _icon-back">На главную</a>
+
+
+                    <div class="order__thank">
+                        <h1 class="order__title-title title">Ваш заказ принят!</h1>
+                        <div class="order__thank-text">Отследить заказ можно в личном кабинете</div>
+                        <a href="#" class="order__thank-button button">Перейти в личный кабинет</a>
+                    </div>
+
+                </div>
+            </section>
+
+        </main>
+        @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+</body>
+
+</html>

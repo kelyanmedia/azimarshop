@@ -1,0 +1,139 @@
+.profile {
+  @include adaptiveValue("padding-top", 70, 35);
+  @include adaptiveValue("padding-bottom", 85, 40);
+  &__container {
+  }
+
+  &__back {
+    @include adaptiveValue("margin-bottom", 70, 25);
+  }
+  &__title {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    padding-bottom: toRem(30);
+  }
+
+  &__body {
+    display: flex;
+    gap: toRem(30);
+
+    @include adaptiveValue("padding-top", 40, 30);
+
+    @media (max-width: $tablet) {
+      flex-direction: column;
+    }
+  }
+
+  &__wrapper {
+    @media (min-width: $tablet) {
+      flex: 1 1 auto;
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    @include adaptiveValue("gap", 30, 20);
+
+    @media (min-width: $tablet) {
+      flex: 0 0 toRem(280);
+    }
+    @media (max-width: $tablet) {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+      padding-bottom: toRem(20);
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    width: fit-content;
+    position: relative;
+    color: #130b0b;
+    font-family: Gilroy;
+    @include adaptiveValue("font-size", 36, 24);
+    font-weight: 400;
+    line-height: 125%; /* 45/36 */
+    transition: all 0.3s ease 0s;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: #ec5027;
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      bottom: 0;
+      left: 0;
+      background-color: #ec5027;
+      opacity: 0;
+      transition: opacity 0.3s ease 0s;
+    }
+
+    &.active {
+      color: #ec5027;
+      &::after {
+        opacity: 1;
+      }
+    }
+    &.logout {
+      opacity: 0.4;
+      @media (any-hover: hover) {
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__form {
+    max-width: toRem(590);
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+}
+
+.form-profile {
+  display: flex;
+  flex-direction: column;
+  &__label {
+    color: #130b0b;
+    font-family: Gilroy;
+    @include adaptiveValue("font-size", 20, 18);
+    font-weight: 500;
+    line-height: 120%; /* 24/20 */
+
+    display: grid;
+    gap: toRem(10);
+
+    &:not(:last-child) {
+      margin-bottom: toRem(20);
+    }
+    @media (min-width: $mobile) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__input {
+    height: toRem(50);
+    flex: 0 0 percent(423, 590);
+  }
+
+  &__button {
+    align-self: flex-end;
+    width: 100%;
+    @include adaptiveValue("margin-top", 20, 10);
+
+    @media (min-width: $mobile) {
+      width: percent(423, 590);
+    }
+  }
+}

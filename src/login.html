@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Главная"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/_header.htm',{})
+        <main class="page">
+
+            <section class="login">
+                <div class="login__container">
+                    <a href="#" class="login__back back _icon-back">На главную</a>
+
+
+                    <from action="#" class="login__body">
+                        <h2 class="login__title title">Вход или регистрация</h2>
+                        <input autocomplete="off" type="text" name="form[]" placeholder="Номер телефона" class="login__input input">
+                        <button class="login__button button">Далее</button>
+                    </from>
+
+                </div>
+            </section>
+
+        </main>
+        @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+</body>
+
+</html>

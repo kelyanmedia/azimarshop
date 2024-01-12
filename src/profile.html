@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Главная"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/_header.htm',{})
+        <main class="page">
+
+            <section class="profile">
+                <div class="profile__container">
+                    <a href="#" class="profile__back back _icon-back">На главную</a>
+
+                    <h1 class="profile__title title">Личный кабинет</h1>
+
+                    <div class="profile__body">
+                        <div class="profile__links">
+                            <a href="#" class="profile__link active">Мои заказы</a>
+                            <a href="#" class="profile__link">Личные данные</a>
+                            <a href="#" class="profile__link">Избранное</a>
+                            <a href="#" class="profile__link logout">Выйти</a>
+                        </div>
+
+                        <div class="profile__wrapper">
+                            <from action="#" class="profile__form form-profile">
+                                <label for="inp1" class="form-profile__label">
+                                    <span>Телефон</span>
+                                    <input id="inp1" autocomplete="off" type="text" name="form[]" placeholder="+998 999 99 99" class="form-profile__input input">
+                                </label>
+                                <label for="inp1" class="form-profile__label">
+                                    <span>Эл. почта</span>
+                                    <input id="inp1" autocomplete="off" type="text" name="form[]" placeholder="Ваш E-mail" class="form-profile__input input">
+                                </label>
+                                <label for="inp1" class="form-profile__label">
+                                    <span>Имя</span>
+                                    <input id="inp1" autocomplete="off" type="text" name="form[]" placeholder="Укажите имя" class="form-profile__input input">
+                                </label>
+                                <label for="inp1" class="form-profile__label">
+                                    <span>Фамилия</span>
+                                    <input id="inp1" autocomplete="off" type="text" name="form[]" placeholder="Укажите фамилию" class="form-profile__input input">
+                                </label>
+                                <label for="inp1" class="form-profile__label">
+                                    <span>Дата рождения</span>
+                                    <input id="inp1" autocomplete="off" type="text" name="form[]" placeholder="ДД ММ ГГ" class="form-profile__input input">
+                                </label>
+                                <button class="form-profile__button button">Сохранить</button>
+                            </from>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </section>
+
+        </main>
+        @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+</body>
+
+</html>

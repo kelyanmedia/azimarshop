@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Главная"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/_header.htm',{})
+        <main class="page">
+
+            <section class="login">
+                <div class="login__container">
+                    <a href="#" class="login__back back _icon-back">На главную</a>
+
+
+                    <from action="#" class="login__body">
+                        <h2 class="login__title title">Вход или регистрация</h2>
+                        <div class="login__text">Введите код, который мы выслали на номер +998 999 99 99</div>
+                        <input autocomplete="off" type="text" name="form[]" placeholder="Код из СМС" class="login__input input">
+                    </from>
+
+                </div>
+            </section>
+
+        </main>
+        @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+</body>
+
+</html>

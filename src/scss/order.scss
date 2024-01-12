@@ -1,0 +1,194 @@
+.order {
+  @include adaptiveValue("padding-top", 70, 35);
+  @include adaptiveValue("padding-bottom", 85, 40);
+  &__container {
+  }
+
+  &__back {
+    @include adaptiveValue("margin-bottom", 70, 25);
+  }
+
+  &__title {
+    margin-bottom: toRem(30);
+  }
+
+  &__body {
+    border-top: 1px solid rgba(0, 0, 0, 0.4);
+    @include adaptiveValue("padding-top", 55, 30);
+
+    display: flex;
+    @include adaptiveValue("column-gap", 90, 25, 0, 1430, 991);
+
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      row-gap: toRem(30);
+    }
+  }
+
+  &__form {
+    flex: 0 0 percent(780, 1400);
+  }
+
+  &__content {
+  }
+
+  &__items {
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 30, 20);
+    }
+  }
+
+  &__item {
+  }
+
+  &__text {
+    color: #130b0b;
+    font-family: Gilroy;
+    @include adaptiveValue("font-size", 29, 22);
+    font-weight: 700;
+    line-height: 120.7%; /* 35/29 */
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 47, 30);
+    }
+  }
+
+  &__button {
+    width: 100%;
+  }
+
+  &__thank {
+    max-width: toRem(423);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__title-title {
+    text-align: center;
+    margin-bottom: toRem(20);
+  }
+
+  &__thank-text {
+    @include adaptiveValue("font-size", 18, 16);
+    font-weight: 400;
+    line-height: 130%; /* 23.4px */
+
+    text-align: center;
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 30, 20);
+    }
+  }
+
+  &__thank-button {
+    font-size: toRem(18);
+    text-transform: none;
+    width: 100%;
+  }
+}
+
+.form-order {
+  &__label {
+    display: grid;
+    gap: toRem(10);
+
+    color: #130b0b;
+    font-family: Gilroy;
+    @include adaptiveValue("font-size", 29, 22);
+    font-weight: 400;
+    line-height: 86.2%; /* 25/29 */
+
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 30, 20);
+    }
+
+    @media (min-width: $mobile) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__input {
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    height: toRem(40);
+    flex: 0 0 percent(475, 880);
+    border-radius: 0 !important;
+  }
+}
+
+.item-order {
+  display: flex;
+  @include adaptiveValue("gap", 40, 15, 0, 1430, 991);
+
+  &:not(:last-child) {
+    @include adaptiveValue("margin-bottom", 30, 20);
+  }
+
+  @media (max-width: $mobile) {
+    flex-direction: column;
+  }
+
+  &__image {
+    height: fit-content;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    flex: 0 0 toRem(200);
+
+    img {
+      max-width: 100%;
+    }
+
+    @media (max-width: $mobile) {
+      max-width: toRem(300);
+      align-self: center;
+    }
+    @media (max-width: $mobileSmall) {
+      max-width: toRem(280);
+    }
+  }
+
+  &__content {
+  }
+
+  &__title {
+    margin-bottom: toRem(10);
+
+    transition: all 0.3s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        color: #ec5027;
+      }
+    }
+  }
+
+  &__category {
+    display: block;
+    @include adaptiveValue("font-size", 29, 22, 0, 1430, 991);
+    font-weight: 500;
+    line-height: 120.7%; /* 35/29 */
+
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 30, 15);
+    }
+
+    transition: all 0.3s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        color: #ec5027;
+      }
+    }
+  }
+
+  &__line {
+    @include adaptiveValue("font-size", 29, 22, 0, 1430, 991);
+    font-weight: 400;
+    line-height: 120.7%; /* 35/29 */
+
+    &:not(:last-child) {
+      margin-bottom: toRem(10);
+    }
+  }
+}
