@@ -139,7 +139,7 @@
 
   &__wrapper {
     &:not(:last-child) {
-      @include adaptiveValue("margin-bottom", 110, 65);
+      @include adaptiveValue("margin-bottom", 70, 65);
     }
   }
 

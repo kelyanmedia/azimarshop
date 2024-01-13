@@ -125,7 +125,7 @@ function initSliders() {
   }
   if (document.querySelector(".partners__items")) {
     new Swiper(".partners__items", {
-      modules: [Navigation, Pagination],
+      modules: [Navigation, Pagination, Autoplay],
       observer: true,
       observeParents: true,
 
@@ -135,6 +135,10 @@ function initSliders() {
       pagination: {
         el: ".partners .pagination",
         clickable: true,
+      },
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
       },
 
       navigation: {
