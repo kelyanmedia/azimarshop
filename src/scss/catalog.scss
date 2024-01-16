@@ -1,5 +1,6 @@
 .catalog {
-  @include adaptiveValue("padding-top", 70, 35);
+  // @include adaptiveValue("padding-top", 70, 35);
+  padding-top: toRem(20);
   @include adaptiveValue("padding-bottom", 85, 40);
   &__container {
   }
@@ -28,11 +29,12 @@
   }
 
   &__breadcrumbs {
-    @include adaptiveValue("margin-bottom", 60, 25);
+    @include adaptiveValue("margin-bottom", 30, 25);
   }
 
   &__title {
-    @include adaptiveValue("margin-bottom", 70, 35);
+    // @include adaptiveValue("margin-bottom", 30, 35);
+    margin-bottom: toRem(30);
   }
 
   &__items {
@@ -260,7 +262,7 @@
     cursor: pointer;
     border: 1px solid rgba(19, 11, 11, 0.4);
 
-    @include adaptiveValue("font-size", 29, 22);
+    @include adaptiveValue("font-size", 24, 22);
     font-weight: 400;
     line-height: 120.7%; /* 35/29 */
 
